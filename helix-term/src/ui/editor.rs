@@ -582,6 +582,9 @@ impl EditorView {
         let mut x = viewport.x;
         let current_doc = view!(editor).doc;
 
+        // Find the shortest unique path for each document if it has a path.
+        // - https://brenden.github.io/ukkonen-animation/?
+
         for doc in editor.documents() {
             let fname = doc
                 .path()
